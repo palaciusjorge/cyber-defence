@@ -10,15 +10,25 @@ services:
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     ports:
       - "5432:5432"
+      
+      
   auth-service:
     build: ./auth-service
     ports:
       - "3001:3001"
     depends_on:
       - db
+    networks:
+      - secure-net
   transfer-service:
     build: ./transfer-service
     ports:
       - "3002:3002"
     depends_on:
       - db
+    networks:
+      - secure-net
+
+networks:
+  secure-net:
+    driver: bridge # Red aislada: Los servicios no se ven desde el exterior, solo vía Gateway
