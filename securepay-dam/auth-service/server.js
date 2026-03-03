@@ -4,8 +4,8 @@ const jwt = require('jsonwebtoken');
 const app = express();
 app.use(express.json());
 
-const PORT = process.env.PORT || 3001;
-const JWT_SECRET = process.env.JWT_SECRET || 'change_this_secret';
+// const PORT = process.env.PORT || 3001;
+// const JWT_SECRET = process.env.JWT_SECRET || 'change_this_secret';
 
 // En memoria - solo skeleton
 const users = [];
