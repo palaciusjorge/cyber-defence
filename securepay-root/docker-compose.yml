@@ -1,0 +1,9 @@
+# Orquestación global del ecosistema SecurePay (esqueleto)
+version: '3.8'
+services:
+  # Aquí se integrará el api-gateway, auth, transfer, audit-logs y la BD compartida
+  # Ejemplo: build: ../securepay-dam/auth-service
+  # Este archivo es un placeholder para orquestación completa.
+  placeholder:
+    image: alpine
+    command: ["/bin/sh","-c","echo placeholder"]
